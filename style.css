@@ -271,7 +271,6 @@ a:focus {
 	top: 0%;
 	animation: crawl 230s linear infinite;
 	transform: scale(0.85);
-	-webkit-font-smoothing: antialiased;
 }
 
 .content__right {
