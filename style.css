@@ -243,7 +243,7 @@ a:focus {
 	font-size: 150%;
 	text-align: justify;
 	transform-origin: 50% 20%;
-	transform: perspective(300px) rotateX(5deg);
+	transform: perspective(300px) rotateX(8deg);
 	overflow: hidden;
 	font-family: 'Brush Script MT';
 }
