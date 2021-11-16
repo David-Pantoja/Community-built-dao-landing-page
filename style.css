@@ -278,8 +278,12 @@ a:focus {
 }
 
 @keyframes crawl {
-	0% { top: 0%; }
-	100% { top: -625%; }
+	0% { 
+		top: 0%;
+	}
+	100% { 
+		top: -625%; 
+	}
 }
 
 @media only screen and (min-width: 52em) {
