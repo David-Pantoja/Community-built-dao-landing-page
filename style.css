@@ -1,0 +1,440 @@
+:root {
+	--color-text: #FFFFFF;
+	--color-background: #0F0F0F;
+	--color-accent: rgba(255, 185, 102, 1);
+	--color-accent-light: rgba(255, 185, 102, 0.1);
+	--color-accent-lighter: rgba(212, 186, 94, 0.09);
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: 'Inter', sans-serif;
+	line-height: 1.6;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+h1 {
+	font-size: 2.25rem;
+	text-align: center;
+	margin-bottom: 3.25rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+a {
+	color: var(--color-text);
+	text-decoration: none;
+	opacity: 1;
+	transition: opacity .15s ease-in-out;
+	-webkit-transition: opacity .15s ease-in-out;
+}
+
+p {
+	margin: 0 0 1rem;
+	opacity: 0.8;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a:hover,
+a:focus {
+	opacity: 0.8;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 75rem;
+	padding: 0 2rem;
+}
+
+.nav {
+	margin-bottom: 2rem;
+	background-image: url(./imgs/gradient-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 4.25rem;
+	padding-top: 2rem;
+}
+
+.nav__logo {
+	display: flex;
+	align-items: center;
+	white-space: break-spaces;
+}
+
+.nav__mobile-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+.nav__links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__link {
+	display: flex;
+	align-items: center;
+}
+
+.nav__link-icon {
+	width: 1.5rem;
+}
+
+.desktop-only {
+	display: none;
+}
+
+.mobile-hero {
+	position: relative;
+	width: 100%;
+	height: 12rem;
+	margin-bottom: 2.5rem;
+	margin-top: -1rem;
+}
+
+.mobile-hero__logo {
+	font-size: 5.375rem;
+	transform: rotate(-10deg) translate(-50%, -50%);
+	transform-origin: top left;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+}
+
+.card {
+	--svg-width: 1rem;
+	--svg-margin: 0.8rem;
+
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	background-color: var(--color-accent-lighter);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.card > h2 {
+	margin-top: 0;
+}
+
+.card__title {
+	display: flex;
+}
+
+.card__title svg {
+	margin-right: var(--svg-margin);
+	width: var(svg-width);
+	height: 1.66666666rem;
+	flex: none;
+	transform: translateY(0.05rem);
+}
+
+.card__title h2 {
+	margin: 0;
+	font-weight: 500;
+	color: var(--color-accent);
+}
+
+.card__countdown {
+	margin: .25rem 0 1.625rem calc(var(--svg-width) + var(--svg-margin));
+}
+
+.card .btn {
+	margin-top: 1.625rem;
+}
+
+.btn {
+	display: inline-block;
+	margin: 0 auto;
+	width: fit-content;
+	background-color: var(--color-accent-light);
+	color: var(--color-accent);
+	padding: .75rem 1.25rem;
+	text-decoration: none;
+	font-weight: 500;
+	border-radius: .25rem;
+}
+
+.content__section {
+	padding-bottom: 3rem;
+}
+
+.background__link {
+	display: block;
+	text-align: center;
+	margin-top: 3rem;
+	white-space: break-spaces;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	padding: 1rem 0.5rem;
+}
+
+.copyright {
+	display: block;
+	margin-bottom: 1.5rem;
+	font-weight: 400;
+	opacity: 0.4;
+}
+
+.footer__nav {
+	display: flex;
+	justify-content: space-around;
+}
+
+.sothebys {
+	display: flex;
+	margin-top: 3.5rem;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.sothebys__text {
+	display: inline-block;
+	margin-right: 0.5rem;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.sothebys__img {
+	width: 7.125rem;
+}
+
+.question:not(:last-of-type) {
+	margin-bottom: 3rem;
+}
+
+.question__q {
+	margin-bottom: 0;
+}
+
+.scrolling {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 150%;
+	text-align: justify;
+	transform-origin: 50% 20%;
+	transform: perspective(300px) rotateX(25deg);
+	overflow: hidden;
+	font-family: 'Brush Script MT';
+}
+
+.scrolling::before {
+	position: absolute;
+	z-index: 10;
+	content: '';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.scrolling__content {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	animation: crawl 230s linear infinite;
+	transform: scale(0.85);
+	-webkit-font-smoothing: antialiased;
+}
+
+.content__right {
+	margin-top: 3rem;
+}
+
+@keyframes crawl {
+	0% { top: 0%; }
+	100% { top: -625%; }
+}
+
+@media only screen and (min-width: 52em) {
+	.desktop-only {
+		display: inherit;
+	}
+
+	.mobile-only {
+		display: none;
+	}
+
+	.content__fixed {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 4rem;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.content__fixed img {
+			filter: invert();
+		}
+	}
+
+
+	.nav {
+		padding: 2rem;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav__links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav__link {
+		display: flex;
+		align-items: center;
+		margin-left: 3rem;
+	}
+	
+	.nav__link-icon {
+		width: 1.5rem;
+		margin-right: 0.35rem;
+	}
+
+	.content {
+		display: grid;
+		position: relative;
+		margin-top: 0;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 2rem;
+	}
+
+	.content__left,
+	.content__right {
+		width: 100%;
+	}
+
+	.content--constitution {
+		grid-template-columns: 4fr 3fr;
+	}
+
+	.content--constitution .content__right {
+		height: 100vh;
+		position: sticky;
+		top: 3rem;
+	}
+
+	h1 {
+		text-align: left;
+		margin-bottom: 1.5rem;
+	}
+
+	.card {
+		display: block;
+	}
+
+	.card__title h2 {
+		font-weight: 700;
+	}
+	
+	.card__countdown {
+		margin-left: 0;
+	}
+
+	.iframe-container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		padding-top: 56.25%;
+	}
+
+	.iframe-container:not(:last-of-type) {
+		margin-bottom: 2rem;
+	}
+
+	.iframe-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.copyright {
+		margin: 0;
+	}
+	
+	.footer__nav {
+		display: flex;
+		justify-content: space-around;
+		width: 20rem;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-text: #333333;
+		--color-background: #F9F4EB;
+		--color-accent: rgba(51, 51, 51, 1);
+		--color-accent-light: rgba(255, 173, 77, 1);
+		--color-accent-lighter: rgba(255, 185, 102, 0.09);
+	}
+
+	p {
+		opacity: 0.9;
+	}
+
+	.nav {
+		background-image: none;
+	}
+
+	.card__title h2 {
+		font-weight: 500;
+	}
+
+	.sothebys__img {
+		filter: invert();
+		opacity: 0.6;
+	}
+
+}
