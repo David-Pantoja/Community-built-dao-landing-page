@@ -24,5 +24,6 @@ let timespan = countdown(1637294408000).toString()
 document.getElementById('countdown').textContent = timespan
 setInterval(function() {
 	timespan = countdown(1637294408000).toString()
-	document.getElementById('countdown').textContent = timespan + ' until auction'
+	//document.getElementById('countdown').textContent = timespan + ' until auction'
+	document.getElementById('countdown').textContent = 'Auction has passed'
 }, 1000)
